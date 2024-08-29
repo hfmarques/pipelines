@@ -1,6 +1,8 @@
 ﻿using System.Threading.Channels;
 
+//******************************************************************************************************************************
 //this is only for learning purposes, don't use it in production. For production an alternative is to use Open.ChannelExtensions
+//******************************************************************************************************************************
 
 // var pipeline = Source(Generate(1, 2, 3));
 var pipeline = Source(GenerateRange(1..10))
@@ -18,7 +20,7 @@ var pipeline = Source(GenerateRange(1..10))
 
 await pipeline.ForEach(System.Console.WriteLine);
 
-static async IAsyncEnumerable<T> Generate<T>(params T[] array)
+async static IAsyncEnumerable<T> Generate<T>(params T[] array)
 {
     foreach (var item in array)
     {
@@ -26,9 +28,9 @@ static async IAsyncEnumerable<T> Generate<T>(params T[] array)
     }
 }
 
-static async IAsyncEnumerable<int> GenerateRange(Range range)
+async static IAsyncEnumerable<int> GenerateRange(Range range)
 {
-    int count = range.End.Value - range.Start.Value + 1;
+    var count = range.End.Value - range.Start.Value + 1;
     foreach (var item in Enumerable.Range(range.Start.Value, count))
     {
         yield return item;
@@ -52,9 +54,9 @@ static ChannelReader<TOut> Source<TOut>(IAsyncEnumerable<TOut> source)
     return channel.Reader;
 }
 
-public static class ChannelReaderExtensions
+internal static class ChannelReaderExtensions
 {
-    static ChannelReader<T> Merge<T>(params ChannelReader<T>[] inputs)
+    private static ChannelReader<T> Merge<T>(params ChannelReader<T>[] inputs)
     {
         var output = Channel.CreateUnbounded<T>();
 
@@ -73,7 +75,7 @@ public static class ChannelReaderExtensions
         return output;
     }
 
-    static ChannelReader<T>[] Split<T>(ChannelReader<T> ch, int n)
+    private static ChannelReader<T>[] Split<T>(ChannelReader<T> ch, int n)
     {
         var outputs = Enumerable.Range(0, n)
             .Select(_ => Channel.CreateUnbounded<T>())
