@@ -1,3 +1,3 @@
 # pipelines
 
-Examples of pipilines in c#
+Examples of pipelines in c#
