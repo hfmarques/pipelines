@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingThreadingChannels", "UsingThreadingChannels\UsingThreadingChannels.csproj", "{0D02765F-1BB1-4332-A278-B5F84B56D64C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingOpenChannelExtensions", "UsingOpenChannelExtensions\UsingOpenChannelExtensions.csproj", "{52E0F022-AA82-48F9-982B-C9B8D44C2028}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{0D02765F-1BB1-4332-A278-B5F84B56D64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D02765F-1BB1-4332-A278-B5F84B56D64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D02765F-1BB1-4332-A278-B5F84B56D64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E0F022-AA82-48F9-982B-C9B8D44C2028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E0F022-AA82-48F9-982B-C9B8D44C2028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E0F022-AA82-48F9-982B-C9B8D44C2028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E0F022-AA82-48F9-982B-C9B8D44C2028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

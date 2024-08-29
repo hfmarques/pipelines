@@ -18,7 +18,7 @@ var pipeline = Source(GenerateRange(1..10))
     )
     .CustomPipe(x => $"{x.item,2}^2 = {x.square,4}");
 
-await pipeline.ForEach(System.Console.WriteLine);
+await pipeline.ForEach(Console.WriteLine);
 
 async static IAsyncEnumerable<T> Generate<T>(params T[] array)
 {
