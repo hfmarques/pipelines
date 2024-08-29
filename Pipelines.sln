@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingThreadingChannels", "U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingOpenChannelExtensions", "UsingOpenChannelExtensions\UsingOpenChannelExtensions.csproj", "{52E0F022-AA82-48F9-982B-C9B8D44C2028}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingIAsyncEnumerable", "UsingIAsyncEnumerable\UsingIAsyncEnumerable.csproj", "{56BB4C37-F579-487A-85B1-BD07AB1B7F72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{52E0F022-AA82-48F9-982B-C9B8D44C2028}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52E0F022-AA82-48F9-982B-C9B8D44C2028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52E0F022-AA82-48F9-982B-C9B8D44C2028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56BB4C37-F579-487A-85B1-BD07AB1B7F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56BB4C37-F579-487A-85B1-BD07AB1B7F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56BB4C37-F579-487A-85B1-BD07AB1B7F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56BB4C37-F579-487A-85B1-BD07AB1B7F72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

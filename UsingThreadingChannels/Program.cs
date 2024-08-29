@@ -5,14 +5,24 @@
 //******************************************************************************************************************************
 
 // var pipeline = Source(Generate(1, 2, 3));
-var pipeline = Source(GenerateRange(1..10))
+
+List<long> arr = [0, 0, 0];
+
+async Task func1 (List<long> a1, int index)
+{
+    a1[index]++;
+    Console.SetCursorPosition(0,0);
+    Console.Write($"{a1[0]} | {a1[1]} | {a1[2]}");
+};
+
+var pipeline = Source(GenerateRange(0..2))
     .CustomPipe(x => (item: x, square: x * x))
     .CustomPipeAsync(
-        maxConcurrency: 2,
+        maxConcurrency: 3,
         async x =>
         {
-            await Task.Delay(x.square * 10);
-
+            // await Task.Delay(x.square * 10);
+            await func1(arr, x.item);
             return x;
         }
     )
